@@ -9,6 +9,8 @@ import NotFound from "./pages/NotFound";
 import PrimaryTasks from "./pages/PrimaryTasks";
 import SecondaryTasks from "./pages/SecondaryTasks";
 import TertiaryTasks from "./pages/TertiaryTasks";
+import UserProfile from "./pages/UserProfile";
+import Settings from "./pages/Settings";
 
 const queryClient = new QueryClient();
 
@@ -21,8 +23,8 @@ const App = () => (
         <AppLayout>
           <Routes>
             <Route path="/" element={<Dashboard />} />
-            <Route path="/profile" element={<Dashboard />} />
-            <Route path="/settings" element={<Dashboard />} />
+            <Route path="/profile" element={<UserProfile />} />
+            <Route path="/settings" element={<Settings />} />
             <Route path="/sessions/academics/primary" element={<PrimaryTasks />} />
             <Route path="/sessions/academics/secondary" element={<SecondaryTasks />} />
             <Route path="/sessions/academics/tertiary" element={<TertiaryTasks />} />
