@@ -6,6 +6,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AppLayout } from "./components/layout/AppLayout";
 import Dashboard from "./pages/Dashboard";
 import NotFound from "./pages/NotFound";
+import PrimaryTasks from "./pages/PrimaryTasks";
+import SecondaryTasks from "./pages/SecondaryTasks";
+import TertiaryTasks from "./pages/TertiaryTasks";
 
 const queryClient = new QueryClient();
 
@@ -20,9 +23,9 @@ const App = () => (
             <Route path="/" element={<Dashboard />} />
             <Route path="/profile" element={<Dashboard />} />
             <Route path="/settings" element={<Dashboard />} />
-            <Route path="/sessions/academics/primary" element={<Dashboard />} />
-            <Route path="/sessions/academics/secondary" element={<Dashboard />} />
-            <Route path="/sessions/academics/tertiary" element={<Dashboard />} />
+            <Route path="/sessions/academics/primary" element={<PrimaryTasks />} />
+            <Route path="/sessions/academics/secondary" element={<SecondaryTasks />} />
+            <Route path="/sessions/academics/tertiary" element={<TertiaryTasks />} />
             <Route path="/sessions/health" element={<Dashboard />} />
             <Route path="/sessions/career" element={<Dashboard />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
